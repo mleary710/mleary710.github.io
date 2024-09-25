@@ -1,10 +1,12 @@
 ---
-title: "Quarto Web Demo"
+title: "Finance Student"
 ---
 
-This is the main landing page!
+My name is Michael Leary and I am a Junior studying finance and banking at Appalachian State University. Currently I am looking for internships or other opportunities to apply the principles of my classes in the real world and begin my career in the finance field.
 
-* To learn more about [geezers](https://www.thegeezer.com/).
+
+
+![Michael Leary](ProPic.jpg)
 
 * To learn more about [Quarto websites](https://quarto.org/docs/websites).
 
