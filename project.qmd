@@ -4,4 +4,4 @@ title: "Projects"
 
 * [Intel SQL Project](IntelProject_Sheet.pdf)
 * [Grammys Python Project](Grammys_Student.ipynb)
-
+* [Chapter 1 R Studio](CH01.qmd)

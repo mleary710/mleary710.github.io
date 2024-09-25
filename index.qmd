@@ -6,7 +6,7 @@ My name is Michael Leary and I am a Junior studying finance and banking at Appal
 
 
 
-![Michael Leary](ProPic.jpg)
+![Michael Leary](ProPic.jpg){width=200}
 
 * To learn more about [Quarto websites](https://quarto.org/docs/websites).
 
