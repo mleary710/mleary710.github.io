@@ -5,7 +5,7 @@ title: "About Me"
 My name is Michael Leary and I am currently a Junior studying finance and banking with a minor in statistics at Appalachian State University. I am originally from Raleigh, NC and enjoy staying active, mostly by working out, running, or rock climbing when I can find the time. My intended major is finance because I've always been around the real estate market and have been interested in understanding the economy and how current events in the news ultimately affect everyday people. As a kid, I remember my dad always turning on NPR on the radio and listened to programs like "marketplace" and "planet money" that discussed the economics of current events. I feel that this along with my parents careers have greatly influenced my decision for my intended major as they both have many years working in real estate in the triangle. My mom graduated in accounting in Mexico and my dad graduated in management here at Appalachian State. My dad changed careers a few years ago to sell building material and construction supplies. Because of this, I've found opportunities working "construction" jobs during my summer and winter breaks which have given me work and other life experiences I'm grateful to have. I am currently looking for any entry level opportunities or internships related to finance and banking but have been curious to apply my construction experience to any project management positions.
 
 
-
+[Resume](2024Resume.pdf)
 ```{r}
 #| echo: false
 set.seed(123)
