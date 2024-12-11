@@ -1,0 +1,3460 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Michael Leary, Jr.">
+
+<title>Michael Leary - UFC Final Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Michael Leary</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./project.html" rel="" target="">
+ <span class="menu-text">Projects</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://www.mountainproject.com/area/112001458/the-dump" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-trash"></i></a>
+    <a href="https://www.linkedin.com/in/michael-leary207801/" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://github.com">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://github.com">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a>
+  <ul class="collapse">
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#data-set" id="toc-data-set" class="nav-link" data-scroll-target="#data-set">Data Set</a></li>
+  <li><a href="#ufc_stats" id="toc-ufc_stats" class="nav-link" data-scroll-target="#ufc_stats">ufc_stats</a></li>
+  <li><a href="#cleaning" id="toc-cleaning" class="nav-link" data-scroll-target="#cleaning">Cleaning</a></li>
+  <li><a href="#aggreate" id="toc-aggreate" class="nav-link" data-scroll-target="#aggreate">Aggreate</a></li>
+  <li><a href="#fighter-look-up-using-max-holloway" id="toc-fighter-look-up-using-max-holloway" class="nav-link" data-scroll-target="#fighter-look-up-using-max-holloway">Fighter look up using Max Holloway</a></li>
+  <li><a href="#ufc_agg" id="toc-ufc_agg" class="nav-link" data-scroll-target="#ufc_agg">ufc_agg</a></li>
+  <li><a href="#significant-strikes" id="toc-significant-strikes" class="nav-link" data-scroll-target="#significant-strikes">Significant Strikes</a></li>
+  <li><a href="#average-number-of-signigicant-strikes" id="toc-average-number-of-signigicant-strikes" class="nav-link" data-scroll-target="#average-number-of-signigicant-strikes">Average Number of Signigicant Strikes</a></li>
+  <li><a href="#knockdowns" id="toc-knockdowns" class="nav-link" data-scroll-target="#knockdowns">knockdowns</a></li>
+  <li><a href="#fight_records_sstrikes" id="toc-fight_records_sstrikes" class="nav-link" data-scroll-target="#fight_records_sstrikes">fight_records_sstrikes</a></li>
+  <li><a href="#rest-of-the-ufc" id="toc-rest-of-the-ufc" class="nav-link" data-scroll-target="#rest-of-the-ufc">Rest of the UFC</a></li>
+  <li><a href="#modified-arrange-win_percentage" id="toc-modified-arrange-win_percentage" class="nav-link" data-scroll-target="#modified-arrange-win_percentage">Modified arrange(-win_percentage)</a></li>
+  <li><a href="#takedowns" id="toc-takedowns" class="nav-link" data-scroll-target="#takedowns">Takedowns</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">UFC Final Project</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Michael Leary, Jr. </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This is my final project looking into UFC fight statistics including striking and takedowns and comparing the analysis we find related to these variables.</p>
+</section>
+<section id="data-source" class="level1">
+<h1>Data Source</h1>
+<p>The UFC data used in this project was obtained from the ufc.stats package, developed by <a href="https://rdrr.io/github/mtoto/ufc.stats/f/README.md">mtoto</a>. The dataset includes updated statistics from official UFC fight records.</p>
+<section id="packages" class="level2">
+<h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Same packages from the bike project</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Data Cleaning</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Different themes</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-set" class="level2">
+<h2 class="anchored" data-anchor-id="data-set">Data Set</h2>
+<p>I found a package that was conveniently already available on R that included up to date statistics. Below is the installation code I input in the console followed by the library used for this project.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"mtoto/ufc.stats"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"ufc_stats"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ufc.stats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Update data</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">refresh_data</span>()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"ufc_stats"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ufc_stats" class="level2">
+<h2 class="anchored" data-anchor-id="ufc_stats">ufc_stats</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 37,350
+Columns: 36
+$ fighter                       &lt;chr&gt; "Petr Yan", "Deiveson Figueiredo", "Petr…
+$ knockdowns                    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ significant_strikes_landed    &lt;int&gt; 6, 1, 32, 10, 21, 13, 25, 14, 37, 15, 16…
+$ significant_strikes_attempted &lt;int&gt; 6, 1, 49, 30, 36, 25, 40, 30, 62, 33, 40…
+$ significant_strikes_rate      &lt;dbl&gt; 1.00, 1.00, 0.65, 0.33, 0.58, 0.52, 0.62…
+$ total_strikes_landed          &lt;int&gt; 42, 1, 32, 10, 28, 13, 50, 14, 38, 15, 1…
+$ total_strikes_attempted       &lt;int&gt; 42, 1, 49, 30, 44, 25, 65, 30, 63, 33, 4…
+$ takedown_successful           &lt;int&gt; 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1…
+$ takedown_attempted            &lt;int&gt; 0, 2, 1, 3, 0, 1, 0, 2, 3, 0, 0, 1, 0, 1…
+$ takedown_rate                 &lt;dbl&gt; 0.0, 0.5, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, …
+$ submission_attempt            &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ reversals                     &lt;int&gt; 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ head_landed                   &lt;int&gt; 5, 0, 12, 6, 16, 4, 19, 4, 26, 9, 5, 0, …
+$ head_attempted                &lt;int&gt; 5, 0, 26, 21, 28, 15, 33, 15, 50, 24, 25…
+$ body_landed                   &lt;int&gt; 0, 1, 6, 3, 1, 6, 5, 8, 6, 6, 7, 0, 7, 1…
+$ body_attempted                &lt;int&gt; 0, 1, 6, 7, 3, 7, 5, 12, 7, 9, 11, 0, 11…
+$ leg_landed                    &lt;int&gt; 1, 0, 14, 1, 4, 3, 1, 2, 5, 0, 4, 0, 2, …
+$ leg_attempted                 &lt;int&gt; 1, 0, 17, 2, 5, 3, 2, 3, 5, 0, 4, 1, 3, …
+$ distance_landed               &lt;int&gt; 1, 1, 31, 10, 18, 13, 21, 12, 32, 13, 16…
+$ distance_attempted            &lt;int&gt; 1, 1, 48, 29, 32, 25, 35, 26, 56, 31, 40…
+$ clinch_landed                 &lt;int&gt; 1, 0, 1, 0, 2, 0, 4, 2, 5, 2, 0, 0, 0, 0…
+$ clinch_attempted              &lt;int&gt; 1, 0, 1, 1, 2, 0, 5, 4, 6, 2, 0, 0, 1, 1…
+$ ground_landed                 &lt;int&gt; 4, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ ground_attempted              &lt;int&gt; 4, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ round                         &lt;chr&gt; "round 1", "round 1", "round 2", "round …
+$ result                        &lt;chr&gt; "Decision - Unanimous", "Decision - Unan…
+$ last_round                    &lt;chr&gt; "5", "5", "5", "5", "5", "5", "5", "5", …
+$ time                          &lt;chr&gt; "5:00", "5:00", "5:00", "5:00", "5:00", …
+$ scheduled_rounds              &lt;chr&gt; "5 Rnd (5-5-5-5-5)", "5 Rnd (5-5-5-5-5)"…
+$ winner                        &lt;chr&gt; "W", "L", "W", "L", "W", "L", "W", "L", …
+$ weight_class                  &lt;chr&gt; "Bantamweight Bout", "Bantamweight Bout"…
+$ event                         &lt;chr&gt; "UFC Fight Night: Yan vs. Figueiredo", "…
+$ fight_date                    &lt;date&gt; 2024-11-23, 2024-11-23, 2024-11-23, 202…
+$ location                      &lt;chr&gt; "Macau, China", "Macau, China", "Macau, …
+$ attendance                    &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+$ id                            &lt;int&gt; 7899, 7899, 7899, 7899, 7899, 7899, 7899…</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(ufc_stats, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 1%">
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 3%">
+<col style="width: 1%">
+<col style="width: 0%">
+<col style="width: 3%">
+<col style="width: 1%">
+<col style="width: 3%">
+<col style="width: 6%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 0%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">fighter</th>
+<th style="text-align: right;">knockdowns</th>
+<th style="text-align: right;">significant_strikes_landed</th>
+<th style="text-align: right;">significant_strikes_attempted</th>
+<th style="text-align: right;">significant_strikes_rate</th>
+<th style="text-align: right;">total_strikes_landed</th>
+<th style="text-align: right;">total_strikes_attempted</th>
+<th style="text-align: right;">takedown_successful</th>
+<th style="text-align: right;">takedown_attempted</th>
+<th style="text-align: right;">takedown_rate</th>
+<th style="text-align: right;">submission_attempt</th>
+<th style="text-align: right;">reversals</th>
+<th style="text-align: right;">head_landed</th>
+<th style="text-align: right;">head_attempted</th>
+<th style="text-align: right;">body_landed</th>
+<th style="text-align: right;">body_attempted</th>
+<th style="text-align: right;">leg_landed</th>
+<th style="text-align: right;">leg_attempted</th>
+<th style="text-align: right;">distance_landed</th>
+<th style="text-align: right;">distance_attempted</th>
+<th style="text-align: right;">clinch_landed</th>
+<th style="text-align: right;">clinch_attempted</th>
+<th style="text-align: right;">ground_landed</th>
+<th style="text-align: right;">ground_attempted</th>
+<th style="text-align: left;">round</th>
+<th style="text-align: left;">result</th>
+<th style="text-align: left;">last_round</th>
+<th style="text-align: left;">time</th>
+<th style="text-align: left;">scheduled_rounds</th>
+<th style="text-align: left;">winner</th>
+<th style="text-align: left;">weight_class</th>
+<th style="text-align: left;">event</th>
+<th style="text-align: left;">fight_date</th>
+<th style="text-align: left;">location</th>
+<th style="text-align: right;">attendance</th>
+<th style="text-align: right;">id</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Petr Yan</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">round 1</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Bantamweight Bout</td>
+<td style="text-align: left;">UFC Fight Night: Yan vs.&nbsp;Figueiredo</td>
+<td style="text-align: left;">2024-11-23</td>
+<td style="text-align: left;">Macau, China</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7899</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Deiveson Figueiredo</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">round 1</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Bantamweight Bout</td>
+<td style="text-align: left;">UFC Fight Night: Yan vs.&nbsp;Figueiredo</td>
+<td style="text-align: left;">2024-11-23</td>
+<td style="text-align: left;">Macau, China</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7899</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Petr Yan</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">round 2</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Bantamweight Bout</td>
+<td style="text-align: left;">UFC Fight Night: Yan vs.&nbsp;Figueiredo</td>
+<td style="text-align: left;">2024-11-23</td>
+<td style="text-align: left;">Macau, China</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7899</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Deiveson Figueiredo</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">0.33</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">round 2</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Bantamweight Bout</td>
+<td style="text-align: left;">UFC Fight Night: Yan vs.&nbsp;Figueiredo</td>
+<td style="text-align: left;">2024-11-23</td>
+<td style="text-align: left;">Macau, China</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7899</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Petr Yan</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">0.58</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">round 3</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Bantamweight Bout</td>
+<td style="text-align: left;">UFC Fight Night: Yan vs.&nbsp;Figueiredo</td>
+<td style="text-align: left;">2024-11-23</td>
+<td style="text-align: left;">Macau, China</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7899</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Deiveson Figueiredo</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">round 3</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Bantamweight Bout</td>
+<td style="text-align: left;">UFC Fight Night: Yan vs.&nbsp;Figueiredo</td>
+<td style="text-align: left;">2024-11-23</td>
+<td style="text-align: left;">Macau, China</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7899</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Petr Yan</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.62</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">round 4</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Bantamweight Bout</td>
+<td style="text-align: left;">UFC Fight Night: Yan vs.&nbsp;Figueiredo</td>
+<td style="text-align: left;">2024-11-23</td>
+<td style="text-align: left;">Macau, China</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7899</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Deiveson Figueiredo</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">round 4</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Bantamweight Bout</td>
+<td style="text-align: left;">UFC Fight Night: Yan vs.&nbsp;Figueiredo</td>
+<td style="text-align: left;">2024-11-23</td>
+<td style="text-align: left;">Macau, China</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7899</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Petr Yan</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">0.59</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">63</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">round 5</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Bantamweight Bout</td>
+<td style="text-align: left;">UFC Fight Night: Yan vs.&nbsp;Figueiredo</td>
+<td style="text-align: left;">2024-11-23</td>
+<td style="text-align: left;">Macau, China</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7899</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Deiveson Figueiredo</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">round 5</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Bantamweight Bout</td>
+<td style="text-align: left;">UFC Fight Night: Yan vs.&nbsp;Figueiredo</td>
+<td style="text-align: left;">2024-11-23</td>
+<td style="text-align: left;">Macau, China</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7899</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The data available has been cleaned for the most part, but looking at the last code output we see that the data is broken down into ‘rounds’. I aggregated the data to be broken down into fights using multiple variables to group observations and also made the following modifications.</p>
+</section>
+<section id="cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="cleaning">Cleaning</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove 'attendance' variable</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ufc_cleaner <span class="ot">&lt;-</span> ufc_stats <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>attendance)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Looking at the first few rows of ufc_stats we can see that all the values for ‘attendance’ are null. This isn’t a variable I’m concerned about so I removed it from the data set entirely.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create fight-end indicator</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>ufc_cleaner <span class="ot">&lt;-</span> ufc_cleaner <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fight_end =</span> <span class="fu">paste0</span>(<span class="st">"Round "</span>, last_round, <span class="st">" - "</span>, time))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This variable will still show how many rounds each fight lasts followed by the time left in the round.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a unique opponent lookup table</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>opponent_lookup <span class="ot">&lt;-</span> ufc_cleaner <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(id, fighter) <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ensure unique fighters with fight 'id'</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">%&gt;%</span>            </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(id) <span class="sc">%&gt;%</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Only keep fights with 2 fighters</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">n</span>() <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span>     </span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Reverse fighters for correct pairing</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">opponent =</span> <span class="fu">rev</span>(fighter)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This table helps add an ‘opponent’ variable to each observation that I then joined with the clean ufc_cleaner table</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Left join to add 'opponent_lookup' to 'ufc_cleaner'</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ufc_cleaned <span class="ot">&lt;-</span> ufc_cleaner <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(opponent_lookup, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"fighter"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="aggreate" class="level2">
+<h2 class="anchored" data-anchor-id="aggreate">Aggreate</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ufc_agg <span class="ot">&lt;-</span> ufc_cleaned <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    id, fighter, opponent, winner, result, event, fight_date, location, fight_end, scheduled_rounds</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">weight_classes =</span> <span class="fu">paste</span>(<span class="fu">unique</span>(weight_class), <span class="at">collapse =</span> <span class="st">", "</span>),</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">knockdowns =</span> <span class="fu">sum</span>(knockdowns, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">sig_strikes_landed =</span> <span class="fu">sum</span>(significant_strikes_landed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">sig_strikes_attempted =</span> <span class="fu">sum</span>(significant_strikes_attempted, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">takedown_landed =</span> <span class="fu">sum</span>(takedown_successful, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">takedown_attempted =</span> <span class="fu">sum</span>(takedown_attempted, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">submission_attempt =</span> <span class="fu">sum</span>(submission_attempt, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">head_landed =</span> <span class="fu">sum</span>(head_landed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">head_attempted =</span> <span class="fu">sum</span>(head_attempted, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">body_landed =</span> <span class="fu">sum</span>(body_landed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">body_attempted =</span> <span class="fu">sum</span>(body_attempted, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">leg_landed =</span> <span class="fu">sum</span>(leg_landed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">leg_attempted =</span> <span class="fu">sum</span>(leg_attempted, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">clinch_landed =</span> <span class="fu">sum</span>(clinch_landed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">clinch_attempted =</span> <span class="fu">sum</span>(clinch_attempted, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">ground_landed =</span> <span class="fu">sum</span>(ground_landed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">ground_attempted =</span> <span class="fu">sum</span>(ground_attempted, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This code chunk is merging the raw data set I started with making it so that each observation includes information on a fight to fight basis versus by rounds. Below is an example of how I looked up a fighter to check ufc_agg along with the columns of the table that I’ll be using for this project.</p>
+</section>
+<section id="fighter-look-up-using-max-holloway" class="level2">
+<h2 class="anchored" data-anchor-id="fighter-look-up-using-max-holloway">Fighter look up using Max Holloway</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>max_holloway <span class="ot">&lt;-</span> ufc_agg <span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(fighter <span class="sc">==</span> <span class="st">"Max Holloway"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(max_holloway, <span class="at">caption =</span> <span class="st">"Max Holloway's Total Stats"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Max Holloway’s Total Stats</caption>
+<colgroup>
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 4%">
+<col style="width: 1%">
+<col style="width: 4%">
+<col style="width: 9%">
+<col style="width: 2%">
+<col style="width: 8%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 7%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 3%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">id</th>
+<th style="text-align: left;">fighter</th>
+<th style="text-align: left;">opponent</th>
+<th style="text-align: left;">winner</th>
+<th style="text-align: left;">result</th>
+<th style="text-align: left;">event</th>
+<th style="text-align: left;">fight_date</th>
+<th style="text-align: left;">location</th>
+<th style="text-align: left;">fight_end</th>
+<th style="text-align: left;">scheduled_rounds</th>
+<th style="text-align: left;">weight_classes</th>
+<th style="text-align: right;">knockdowns</th>
+<th style="text-align: right;">sig_strikes_landed</th>
+<th style="text-align: right;">sig_strikes_attempted</th>
+<th style="text-align: right;">takedown_landed</th>
+<th style="text-align: right;">takedown_attempted</th>
+<th style="text-align: right;">submission_attempt</th>
+<th style="text-align: right;">head_landed</th>
+<th style="text-align: right;">head_attempted</th>
+<th style="text-align: right;">body_landed</th>
+<th style="text-align: right;">body_attempted</th>
+<th style="text-align: right;">leg_landed</th>
+<th style="text-align: right;">leg_attempted</th>
+<th style="text-align: right;">clinch_landed</th>
+<th style="text-align: right;">clinch_attempted</th>
+<th style="text-align: right;">ground_landed</th>
+<th style="text-align: right;">ground_attempted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1841</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Dustin Poirier</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Submission</td>
+<td style="text-align: left;">UFC 143: Diaz vs Condit</td>
+<td style="text-align: left;">2012-02-04</td>
+<td style="text-align: left;">Las Vegas, Nevada, USA</td>
+<td style="text-align: left;">Round 1 - 3:23</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1942</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Pat Schilling</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">The Ultimate Fighter LIVE Finale</td>
+<td style="text-align: left;">2012-06-01</td>
+<td style="text-align: left;">Las Vegas, Nevada, USA</td>
+<td style="text-align: left;">Round 3 - 5:00</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">118</td>
+<td style="text-align: right;">267</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">224</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2031</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Justin Lawrence</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">KO/TKO</td>
+<td style="text-align: left;">UFC 150: Henderson vs Edgar II</td>
+<td style="text-align: left;">2012-08-11</td>
+<td style="text-align: left;">Denver, Colorado, USA</td>
+<td style="text-align: left;">Round 2 - 4:49</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">124</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2145</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Leonard Garcia</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Decision - Split</td>
+<td style="text-align: left;">UFC 155: Dos Santos vs Velasquez II</td>
+<td style="text-align: left;">2012-12-29</td>
+<td style="text-align: left;">Las Vegas, Nevada, USA</td>
+<td style="text-align: left;">Round 3 - 5:00</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">269</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">193</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2294</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Dennis Bermudez</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Decision - Split</td>
+<td style="text-align: left;">UFC 160: Velasquez vs Silva 2</td>
+<td style="text-align: left;">2013-05-25</td>
+<td style="text-align: left;">Las Vegas, Nevada, USA</td>
+<td style="text-align: left;">Round 3 - 5:00</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">193</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">173</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2365</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Conor McGregor</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">UFC Fight Night: Shogun vs Sonnen</td>
+<td style="text-align: left;">2013-08-17</td>
+<td style="text-align: left;">Boston, Massachusetts, USA</td>
+<td style="text-align: left;">Round 3 - 5:00</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2537</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Will Chope</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">KO/TKO</td>
+<td style="text-align: left;">UFC Fight Night: Saffiedine vs Lim</td>
+<td style="text-align: left;">2014-01-04</td>
+<td style="text-align: left;">Singapore, Singapore</td>
+<td style="text-align: left;">Round 2 - 2:27</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">139</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2680</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Andre Fili</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Submission</td>
+<td style="text-align: left;">UFC 172: Jones vs Teixeira</td>
+<td style="text-align: left;">2014-04-26</td>
+<td style="text-align: left;">Baltimore, Maryland, USA</td>
+<td style="text-align: left;">Round 3 - 3:39</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">149</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">122</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2843</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Clay Collard</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">KO/TKO</td>
+<td style="text-align: left;">UFC Fight Night: Henderson vs Dos Anjos</td>
+<td style="text-align: left;">2014-08-23</td>
+<td style="text-align: left;">Tulsa, Oklahoma, USA</td>
+<td style="text-align: left;">Round 3 - 3:47</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Catch Weight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">124</td>
+<td style="text-align: right;">204</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2925</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Akira Corassani</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">KO/TKO</td>
+<td style="text-align: left;">UFC Fight Night: Nelson vs Story</td>
+<td style="text-align: left;">2014-10-04</td>
+<td style="text-align: left;">Stockholm, Sweden</td>
+<td style="text-align: left;">Round 1 - 3:11</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3070</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Cole Miller</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">UFC Fight Night: Henderson vs Thatch</td>
+<td style="text-align: left;">2015-02-14</td>
+<td style="text-align: left;">Broomfield, Colorado, USA</td>
+<td style="text-align: left;">Round 3 - 5:00</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">176</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">145</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3150</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Cub Swanson</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Submission</td>
+<td style="text-align: left;">UFC Fight Night: Machida vs Rockhold</td>
+<td style="text-align: left;">2015-04-18</td>
+<td style="text-align: left;">Newark, New Jersey, USA</td>
+<td style="text-align: left;">Round 3 - 3:58</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">198</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">163</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3345</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Charles Oliveira</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">KO/TKO</td>
+<td style="text-align: left;">UFC Fight Night: Holloway vs Oliveira</td>
+<td style="text-align: left;">2015-08-23</td>
+<td style="text-align: left;">Saskatoon, Saskatchewan, Canada</td>
+<td style="text-align: left;">Round 1 - 1:39</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3475</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Jeremy Stephens</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">UFC 194: Aldo vs McGregor</td>
+<td style="text-align: left;">2015-12-12</td>
+<td style="text-align: left;">Las Vegas, Nevada, USA</td>
+<td style="text-align: left;">Round 3 - 5:00</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">99</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3661</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Ricardo Lamas</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">UFC 199: Rockhold vs.&nbsp;Bisping 2</td>
+<td style="text-align: left;">2016-06-04</td>
+<td style="text-align: left;">Los Angeles, California, USA</td>
+<td style="text-align: left;">Round 3 - 5:00</td>
+<td style="text-align: left;">3 Rnd (5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">103</td>
+<td style="text-align: right;">205</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">179</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3944</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Anthony Pettis</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">KO/TKO</td>
+<td style="text-align: left;">UFC 206: Holloway vs.&nbsp;Pettis</td>
+<td style="text-align: left;">2016-12-10</td>
+<td style="text-align: left;">Toronto, Ontario, Canada</td>
+<td style="text-align: left;">Round 3 - 4:50</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">UFC Interim Featherweight Title Bout</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">208</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">143</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4133</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Jose Aldo</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">KO/TKO</td>
+<td style="text-align: left;">UFC 212: Aldo vs.&nbsp;Holloway</td>
+<td style="text-align: left;">2017-06-03</td>
+<td style="text-align: left;">Rio de Janeiro, Rio de Janeiro, Brazil</td>
+<td style="text-align: left;">Round 3 - 4:13</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">UFC Featherweight Title Bout</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">104</td>
+<td style="text-align: right;">207</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">185</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">55</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4389</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Jose Aldo</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">KO/TKO</td>
+<td style="text-align: left;">UFC 218: Holloway vs.&nbsp;Aldo 2</td>
+<td style="text-align: left;">2017-12-02</td>
+<td style="text-align: left;">Detroit, Michigan, USA</td>
+<td style="text-align: left;">Round 3 - 4:51</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">UFC Featherweight Title Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">174</td>
+<td style="text-align: right;">397</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">135</td>
+<td style="text-align: right;">349</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">23</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4884</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Brian Ortega</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">TKO - Doctor’s Stoppage</td>
+<td style="text-align: left;">UFC 231: Holloway vs.&nbsp;Ortega</td>
+<td style="text-align: left;">2018-12-08</td>
+<td style="text-align: left;">Toronto, Ontario, Canada</td>
+<td style="text-align: left;">Round 4 - 5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">UFC Featherweight Title Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">290</td>
+<td style="text-align: right;">490</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">244</td>
+<td style="text-align: right;">430</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5034</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Dustin Poirier</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">UFC 236: Holloway vs.&nbsp;Poirier 2</td>
+<td style="text-align: left;">2019-04-13</td>
+<td style="text-align: left;">Atlanta, Georgia, USA</td>
+<td style="text-align: left;">Round 5 - 5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">UFC Interim Lightweight Title Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">181</td>
+<td style="text-align: right;">446</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">141</td>
+<td style="text-align: right;">394</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5193</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Frankie Edgar</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">UFC 240: Holloway vs.&nbsp;Edgar</td>
+<td style="text-align: left;">2019-07-27</td>
+<td style="text-align: left;">Edmonton, Alberta, Canada</td>
+<td style="text-align: left;">Round 5 - 5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">UFC Featherweight Title Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">129</td>
+<td style="text-align: right;">328</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">109</td>
+<td style="text-align: right;">295</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5401</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Alexander Volkanovski</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">UFC 245: Usman vs.&nbsp;Covington</td>
+<td style="text-align: left;">2019-12-14</td>
+<td style="text-align: left;">Las Vegas, Nevada, USA</td>
+<td style="text-align: left;">Round 5 - 5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">UFC Featherweight Title Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">303</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">233</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5609</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Alexander Volkanovski</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Decision - Split</td>
+<td style="text-align: left;">UFC 251: Usman vs.&nbsp;Masvidal</td>
+<td style="text-align: left;">2020-07-11</td>
+<td style="text-align: left;">Abu Dhabi, Abu Dhabi, United Arab Emirates</td>
+<td style="text-align: left;">Round 5 - 5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">UFC Featherweight Title Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">268</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">167</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5882</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Calvin Kattar</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">UFC Fight Night: Holloway vs.&nbsp;Kattar</td>
+<td style="text-align: left;">2021-01-16</td>
+<td style="text-align: left;">Abu Dhabi, Abu Dhabi, United Arab Emirates</td>
+<td style="text-align: left;">Round 5 - 5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">445</td>
+<td style="text-align: right;">744</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">274</td>
+<td style="text-align: right;">553</td>
+<td style="text-align: right;">117</td>
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6329</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Yair Rodriguez</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">UFC Fight Night: Holloway vs.&nbsp;Rodriguez</td>
+<td style="text-align: left;">2021-11-13</td>
+<td style="text-align: left;">Las Vegas, Nevada, USA</td>
+<td style="text-align: left;">Round 5 - 5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">404</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">129</td>
+<td style="text-align: right;">278</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">33</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6648</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Alexander Volkanovski</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">UFC 276: Adesanya vs.&nbsp;Cannonier</td>
+<td style="text-align: left;">2022-07-02</td>
+<td style="text-align: left;">Las Vegas, Nevada, USA</td>
+<td style="text-align: left;">Round 5 - 5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">UFC Featherweight Title Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">127</td>
+<td style="text-align: right;">301</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">213</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7037</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Arnold Allen</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Decision - Unanimous</td>
+<td style="text-align: left;">UFC Fight Night: Holloway vs.&nbsp;Allen</td>
+<td style="text-align: left;">2023-04-15</td>
+<td style="text-align: left;">Kansas City, Missouri, USA</td>
+<td style="text-align: left;">Round 5 - 5:00</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;">262</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7258</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Chan Sung Jung</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">KO/TKO</td>
+<td style="text-align: left;">UFC Fight Night: Holloway vs.&nbsp;The Korean Zombie</td>
+<td style="text-align: left;">2023-08-26</td>
+<td style="text-align: left;">Kallang, Singapore</td>
+<td style="text-align: left;">Round 3 - 0:23</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">Featherweight Bout</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7574</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Justin Gaethje</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">KO/TKO</td>
+<td style="text-align: left;">UFC 300: Pereira vs.&nbsp;Hill</td>
+<td style="text-align: left;">2024-04-13</td>
+<td style="text-align: left;">Las Vegas, Nevada, USA</td>
+<td style="text-align: left;">Round 5 - 4:59</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">Lightweight Bout</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">181</td>
+<td style="text-align: right;">309</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">149</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7850</td>
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: left;">Ilia Topuria</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">KO/TKO</td>
+<td style="text-align: left;">UFC 308: Topuria vs.&nbsp;Holloway</td>
+<td style="text-align: left;">2024-10-26</td>
+<td style="text-align: left;">Abu Dhabi, Abu Dhabi, United Arab Emirates</td>
+<td style="text-align: left;">Round 3 - 1:34</td>
+<td style="text-align: left;">5 Rnd (5-5-5-5-5)</td>
+<td style="text-align: left;">UFC Featherweight Title Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">204</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">151</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(ufc_agg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "id"                    "fighter"               "opponent"             
+ [4] "winner"                "result"                "event"                
+ [7] "fight_date"            "location"              "fight_end"            
+[10] "scheduled_rounds"      "weight_classes"        "knockdowns"           
+[13] "sig_strikes_landed"    "sig_strikes_attempted" "takedown_landed"      
+[16] "takedown_attempted"    "submission_attempt"    "head_landed"          
+[19] "head_attempted"        "body_landed"           "body_attempted"       
+[22] "leg_landed"            "leg_attempted"         "clinch_landed"        
+[25] "clinch_attempted"      "ground_landed"         "ground_attempted"     </code></pre>
+</div>
+</div>
+<p>This code chunk shows how to look up stats for a specific fighter while also showing the variables in the cleaned and aggreagated ufc_agg data set.</p>
+</section>
+<section id="ufc_agg" class="level2">
+<h2 class="anchored" data-anchor-id="ufc_agg">ufc_agg</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(ufc_agg),</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Cleaned and Aggregated"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Cleaned and Aggregated</caption>
+<colgroup>
+<col style="width: 0%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 5%">
+<col style="width: 2%">
+<col style="width: 5%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 2%">
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 4%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">id</th>
+<th style="text-align: left;">fighter</th>
+<th style="text-align: left;">opponent</th>
+<th style="text-align: left;">winner</th>
+<th style="text-align: left;">result</th>
+<th style="text-align: left;">event</th>
+<th style="text-align: left;">fight_date</th>
+<th style="text-align: left;">location</th>
+<th style="text-align: left;">fight_end</th>
+<th style="text-align: left;">scheduled_rounds</th>
+<th style="text-align: left;">weight_classes</th>
+<th style="text-align: right;">knockdowns</th>
+<th style="text-align: right;">sig_strikes_landed</th>
+<th style="text-align: right;">sig_strikes_attempted</th>
+<th style="text-align: right;">takedown_landed</th>
+<th style="text-align: right;">takedown_attempted</th>
+<th style="text-align: right;">submission_attempt</th>
+<th style="text-align: right;">head_landed</th>
+<th style="text-align: right;">head_attempted</th>
+<th style="text-align: right;">body_landed</th>
+<th style="text-align: right;">body_attempted</th>
+<th style="text-align: right;">leg_landed</th>
+<th style="text-align: right;">leg_attempted</th>
+<th style="text-align: right;">clinch_landed</th>
+<th style="text-align: right;">clinch_attempted</th>
+<th style="text-align: right;">ground_landed</th>
+<th style="text-align: right;">ground_attempted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Gerard Gordeau</td>
+<td style="text-align: left;">Royce Gracie</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Submission</td>
+<td style="text-align: left;">UFC 1: The Beginning</td>
+<td style="text-align: left;">1993-11-12</td>
+<td style="text-align: left;">Denver, Colorado, USA</td>
+<td style="text-align: left;">Round 1 - 1:44</td>
+<td style="text-align: left;">No Time Limit</td>
+<td style="text-align: left;">UFC 1 Tournament Title Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Royce Gracie</td>
+<td style="text-align: left;">Gerard Gordeau</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Submission</td>
+<td style="text-align: left;">UFC 1: The Beginning</td>
+<td style="text-align: left;">1993-11-12</td>
+<td style="text-align: left;">Denver, Colorado, USA</td>
+<td style="text-align: left;">Round 1 - 1:44</td>
+<td style="text-align: left;">No Time Limit</td>
+<td style="text-align: left;">UFC 1 Tournament Title Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Jason DeLucia</td>
+<td style="text-align: left;">Trent Jenkins</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Submission</td>
+<td style="text-align: left;">UFC 1: The Beginning</td>
+<td style="text-align: left;">1993-11-12</td>
+<td style="text-align: left;">Denver, Colorado, USA</td>
+<td style="text-align: left;">Round 1 - 0:52</td>
+<td style="text-align: left;">No Time Limit</td>
+<td style="text-align: left;">Open Weight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Trent Jenkins</td>
+<td style="text-align: left;">Jason DeLucia</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Submission</td>
+<td style="text-align: left;">UFC 1: The Beginning</td>
+<td style="text-align: left;">1993-11-12</td>
+<td style="text-align: left;">Denver, Colorado, USA</td>
+<td style="text-align: left;">Round 1 - 0:52</td>
+<td style="text-align: left;">No Time Limit</td>
+<td style="text-align: left;">Open Weight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Ken Shamrock</td>
+<td style="text-align: left;">Royce Gracie</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Submission</td>
+<td style="text-align: left;">UFC 1: The Beginning</td>
+<td style="text-align: left;">1993-11-12</td>
+<td style="text-align: left;">Denver, Colorado, USA</td>
+<td style="text-align: left;">Round 1 - 0:57</td>
+<td style="text-align: left;">No Time Limit</td>
+<td style="text-align: left;">Open Weight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Royce Gracie</td>
+<td style="text-align: left;">Ken Shamrock</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Submission</td>
+<td style="text-align: left;">UFC 1: The Beginning</td>
+<td style="text-align: left;">1993-11-12</td>
+<td style="text-align: left;">Denver, Colorado, USA</td>
+<td style="text-align: left;">Round 1 - 0:57</td>
+<td style="text-align: left;">No Time Limit</td>
+<td style="text-align: left;">Open Weight Bout</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="significant-strikes" class="level2">
+<h2 class="anchored" data-anchor-id="significant-strikes">Significant Strikes</h2>
+<p>The site where I found the raw data set had an example usage section with code finding fighters with “the most significant strikes landed in UFC history”. I copied it to see if I got a similar output after cleaning and aggregation.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>ufc_sigsrikes <span class="ot">&lt;-</span> ufc_agg <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(fighter) <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total_significant_strikes =</span> <span class="fu">sum</span>(sig_strikes_landed),) <span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>total_significant_strikes)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(ufc_sigsrikes, <span class="dv">10</span>),</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Top 10 Fighters by Total Career Significant Strikes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Top 10 Fighters by Total Career Significant Strikes</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">fighter</th>
+<th style="text-align: right;">total_significant_strikes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: right;">3457</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sean Strickland</td>
+<td style="text-align: right;">2069</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Angela Hill</td>
+<td style="text-align: right;">2036</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bobby Green</td>
+<td style="text-align: right;">1854</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rafael Dos Anjos</td>
+<td style="text-align: right;">1822</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Frankie Edgar</td>
+<td style="text-align: right;">1801</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Joanna Jedrzejczyk</td>
+<td style="text-align: right;">1754</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dustin Poirier</td>
+<td style="text-align: right;">1752</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Donald Cerrone</td>
+<td style="text-align: right;">1748</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jessica Andrade</td>
+<td style="text-align: right;">1730</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The output was similar to what was on the website and reassures that this data is ready to use.</p>
+<p>Looking at the table I noticed that Max Holloway has a significantly larger amount of significant strikes landed than the next 9 fighters so I decided to look further into this.</p>
+</section>
+<section id="average-number-of-signigicant-strikes" class="level2">
+<h2 class="anchored" data-anchor-id="average-number-of-signigicant-strikes">Average Number of Signigicant Strikes</h2>
+<p>I wanted to see if Max Holloway’s large total_significant_strike was attributed to him having a significantly larger number of fights while also looking at the average number of significant strikes a fight with other fighters.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarize total significant strikes and number of fights to create `avg_n_sstrikes`</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>most_sstrikes <span class="ot">&lt;-</span> ufc_agg <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(fighter) <span class="sc">%&gt;%</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_fights =</span> <span class="fu">n</span>(),</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_significant_strikes =</span> <span class="fu">sum</span>(sig_strikes_landed)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">avg_n_sstrikes =</span> <span class="fu">round</span>(total_significant_strikes <span class="sc">/</span> total_fights, <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_significant_strikes))</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Show Top 10 Fighters</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>topten_total_sstrikes <span class="ot">&lt;-</span> <span class="fu">head</span>(most_sstrikes, <span class="dv">10</span>)</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(topten_total_sstrikes, <span class="dv">10</span>),</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Top 10 Fighters by Total Career Significant Strikes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Top 10 Fighters by Total Career Significant Strikes</caption>
+<colgroup>
+<col style="width: 26%">
+<col style="width: 17%">
+<col style="width: 35%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">fighter</th>
+<th style="text-align: right;">total_fights</th>
+<th style="text-align: right;">total_significant_strikes</th>
+<th style="text-align: right;">avg_n_sstrikes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">3457</td>
+<td style="text-align: right;">115.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sean Strickland</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">2069</td>
+<td style="text-align: right;">94.05</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Angela Hill</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">2036</td>
+<td style="text-align: right;">78.31</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bobby Green</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">1854</td>
+<td style="text-align: right;">74.16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rafael Dos Anjos</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">1822</td>
+<td style="text-align: right;">50.61</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Frankie Edgar</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">1801</td>
+<td style="text-align: right;">60.03</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Joanna Jedrzejczyk</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1754</td>
+<td style="text-align: right;">116.93</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dustin Poirier</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">1752</td>
+<td style="text-align: right;">56.52</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Donald Cerrone</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">1748</td>
+<td style="text-align: right;">46.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jessica Andrade</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">1730</td>
+<td style="text-align: right;">61.79</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ufcpro_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Looking at the top 10 fighters in total significant strikes landed we can see that there are 3 other fighters who have more fights than Max Holloway. Comparing the stats to Joanna Jedrzejczyk we see she’s the only fighter to average more significant strikes while having the lowest total_significant_strikes count in this table a fight while only having only 15 fights.</p>
+<p>Fighters with more fights than Max Holloway</p>
+<ul>
+<li>Donald Cerrone</li>
+<li>Rafael Dos Anjos</li>
+<li>Dustin Poirier</li>
+</ul>
+<p>What does this imply about Max Holloways striking and the 3 fighters listed? Is Max Holloway a better striker than a majority of the UFC? How has this translated to his fight record? We can look into this to see how his significant strike count is related to his knockdowns count and how many KO/TKO finish wins Max Holloway has.</p>
+</section>
+<section id="knockdowns" class="level2">
+<h2 class="anchored" data-anchor-id="knockdowns">knockdowns</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># find fighters with the highest `total_significant_strike` count and compare their knockdowns and KO/TKO finishes</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>fighter_knockdowns <span class="ot">&lt;-</span> ufc_agg <span class="sc">%&gt;%</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(fighter) <span class="sc">%&gt;%</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_fights =</span> <span class="fu">n</span>(),</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_significant_strikes =</span> <span class="fu">sum</span>(sig_strikes_landed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">avg_n_sstrikes =</span> <span class="fu">round</span>(total_significant_strikes <span class="sc">/</span> total_fights, <span class="dv">2</span>),</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_knockdowns =</span> <span class="fu">sum</span>(knockdowns, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_ko =</span> <span class="fu">sum</span>(result <span class="sc">==</span> <span class="st">"KO/TKO"</span> <span class="sc">&amp;</span> winner <span class="sc">==</span> <span class="st">"W"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>total_significant_strikes)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>top_10_sstrikes_knockdowns <span class="ot">&lt;-</span> <span class="fu">head</span>(fighter_knockdowns, <span class="dv">10</span>)</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>  top_10_sstrikes_knockdowns,</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Top 10 Fighters by Total Knockdowns(Descending Order of Total Significant Strikes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Top 10 Fighters by Total Knockdowns(Descending Order of Total Significant Strikes</caption>
+<colgroup>
+<col style="width: 19%">
+<col style="width: 13%">
+<col style="width: 26%">
+<col style="width: 15%">
+<col style="width: 17%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">fighter</th>
+<th style="text-align: right;">total_fights</th>
+<th style="text-align: right;">total_significant_strikes</th>
+<th style="text-align: right;">avg_n_sstrikes</th>
+<th style="text-align: right;">total_knockdowns</th>
+<th style="text-align: right;">total_ko</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">3457</td>
+<td style="text-align: right;">115.23</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sean Strickland</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">2069</td>
+<td style="text-align: right;">94.05</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Angela Hill</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">2036</td>
+<td style="text-align: right;">78.31</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bobby Green</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">1854</td>
+<td style="text-align: right;">74.16</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rafael Dos Anjos</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">1822</td>
+<td style="text-align: right;">50.61</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Frankie Edgar</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">1801</td>
+<td style="text-align: right;">60.03</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Joanna Jedrzejczyk</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1754</td>
+<td style="text-align: right;">116.93</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dustin Poirier</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">1752</td>
+<td style="text-align: right;">56.52</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Donald Cerrone</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">1748</td>
+<td style="text-align: right;">46.00</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jessica Andrade</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">1730</td>
+<td style="text-align: right;">61.79</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ufcpro_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can see that Max Holloway has about an average total_knockdown count for this list. We can look to see if this is true when comparing him to the rest of the UFC.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># find fighters average total knockdowns</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>ufc_avg_knockdowns <span class="ot">&lt;-</span> ufc_agg <span class="sc">%&gt;%</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(fighter) <span class="sc">%&gt;%</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_fights =</span> <span class="fu">n</span>(),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_knockdowns =</span> <span class="fu">sum</span>(knockdowns, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># filter to ensure average comes from fighters with multiple fights</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(total_fights <span class="sc">&gt;=</span> <span class="dv">15</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">avg_knockdowns =</span> <span class="fu">round</span>(<span class="fu">mean</span>(total_knockdowns), <span class="dv">2</span>))</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>ufc_avg_knockdowns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  avg_knockdowns
+           &lt;dbl&gt;
+1           5.43</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ufcpro_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>With this visual we can see that Max Holloway compares well in this table as he is tied with 3 other fighters in this table. Below I modified the visual to show how this comparison among fighters in the UFC where I modified it to arrange the table by number of Total KO/TKO wins.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># New table to see this code in `ufc_agg`</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>ufc_knockdowns_ko<span class="ot">&lt;-</span> ufc_agg <span class="sc">%&gt;%</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(fighter) <span class="sc">%&gt;%</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_fights =</span> <span class="fu">n</span>(),</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_significant_strikes =</span> <span class="fu">sum</span>(sig_strikes_landed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">avg_n_sstrikes =</span> <span class="fu">round</span>(total_significant_strikes <span class="sc">/</span> total_fights, <span class="dv">2</span>),</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_knockdowns =</span> <span class="fu">sum</span>(knockdowns, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_ko =</span> <span class="fu">sum</span>(result <span class="sc">==</span> <span class="st">"KO/TKO"</span> <span class="sc">&amp;</span> winner <span class="sc">==</span> <span class="st">"W"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>total_ko)</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(ufc_knockdowns_ko <span class="sc">%&gt;%</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>         <span class="fu">filter</span>(total_fights <span class="sc">&gt;=</span> <span class="dv">15</span>), <span class="fu">aes</span>(</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> total_knockdowns,</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> total_ko,</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> total_fights)) <span class="sc">+</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pander</span>() <span class="sc">+</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Knockdowns vs. KO/TKO wins (Fighters with 15 or more Fights)"</span>,</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Total Knockdowns"</span>,</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Total KO/TKO wins"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ufcpro_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In this visual we can see that Max Holloway is about an average fighter when it comes to his comparison in these conditions. I made a new table down below to compare the records of other fighters and see how Max Holloway compares.</p>
+</section>
+<section id="fight_records_sstrikes" class="level2">
+<h2 class="anchored" data-anchor-id="fight_records_sstrikes">fight_records_sstrikes</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># table with fight record of fighters while including more variables</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>fight_records_and_sstrikes <span class="ot">&lt;-</span> ufc_agg <span class="sc">%&gt;%</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(fighter) <span class="sc">%&gt;%</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_fights =</span> <span class="fu">n</span>(),</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">wins =</span> <span class="fu">sum</span>(winner <span class="sc">==</span> <span class="st">"W"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">losses =</span> <span class="fu">sum</span>(winner <span class="sc">==</span> <span class="st">"L"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_significant_strikes =</span> <span class="fu">sum</span>(sig_strikes_landed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">avg_n_sstrikes =</span> <span class="fu">round</span>(total_significant_strikes <span class="sc">/</span> total_fights, <span class="dv">2</span>),</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">win_percentage =</span> wins <span class="sc">/</span> total_fights) <span class="sc">%&gt;%</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Arrange in descending order of `wins` &amp; ascending order of `losses`</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>wins, <span class="sc">+</span>losses)</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(fight_records_and_sstrikes, <span class="dv">10</span>),</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Top 10 Fighters in Total Wins(Ascending Order of Losses)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Top 10 Fighters in Total Wins(Ascending Order of Losses)</caption>
+<colgroup>
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 26%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">fighter</th>
+<th style="text-align: right;">total_fights</th>
+<th style="text-align: right;">wins</th>
+<th style="text-align: right;">losses</th>
+<th style="text-align: right;">total_significant_strikes</th>
+<th style="text-align: right;">avg_n_sstrikes</th>
+<th style="text-align: right;">win_percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jim Miller</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">1300</td>
+<td style="text-align: right;">28.89</td>
+<td style="text-align: right;">0.6000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Charles Oliveira</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">884</td>
+<td style="text-align: right;">26.00</td>
+<td style="text-align: right;">0.6764706</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Donald Cerrone</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">1748</td>
+<td style="text-align: right;">46.00</td>
+<td style="text-align: right;">0.6052632</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Andrei Arlovski</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">1585</td>
+<td style="text-align: right;">37.74</td>
+<td style="text-align: right;">0.5476190</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jon Jones</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1564</td>
+<td style="text-align: right;">65.17</td>
+<td style="text-align: right;">0.9166667</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dustin Poirier</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1752</td>
+<td style="text-align: right;">56.52</td>
+<td style="text-align: right;">0.7096774</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3457</td>
+<td style="text-align: right;">115.23</td>
+<td style="text-align: right;">0.7333333</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Demian Maia</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">739</td>
+<td style="text-align: right;">22.39</td>
+<td style="text-align: right;">0.6666667</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Neil Magny</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">1428</td>
+<td style="text-align: right;">42.00</td>
+<td style="text-align: right;">0.6470588</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rafael Dos Anjos</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1822</td>
+<td style="text-align: right;">50.61</td>
+<td style="text-align: right;">0.5833333</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>I originally tried to arrange this table in descending order of win_percentage but the first 10 fighters only had one or a few number of total_fights which is why down below I arranged it with arrange(-wins, +losses). We can see it’s not much different than using arrange(-wins) so I used the code down below.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>fight_records_sstrikes <span class="ot">&lt;-</span> ufc_agg <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(fighter) <span class="sc">%&gt;%</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_fights =</span> <span class="fu">n</span>(),</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">wins =</span> <span class="fu">sum</span>(winner <span class="sc">==</span> <span class="st">"W"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">losses =</span> <span class="fu">sum</span>(winner <span class="sc">==</span> <span class="st">"L"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_significant_strikes =</span> <span class="fu">sum</span>(sig_strikes_landed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">avg_n_sstrikes =</span> <span class="fu">round</span>(total_significant_strikes <span class="sc">/</span> total_fights, <span class="dv">2</span>),</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">win_percentage =</span> wins <span class="sc">/</span> total_fights) <span class="sc">%&gt;%</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Arrange by wins in descending order</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>wins)</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(fight_records_sstrikes, <span class="dv">10</span>),</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Top 10 Winningest Fighters"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Top 10 Winningest Fighters</caption>
+<colgroup>
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 26%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">fighter</th>
+<th style="text-align: right;">total_fights</th>
+<th style="text-align: right;">wins</th>
+<th style="text-align: right;">losses</th>
+<th style="text-align: right;">total_significant_strikes</th>
+<th style="text-align: right;">avg_n_sstrikes</th>
+<th style="text-align: right;">win_percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jim Miller</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">1300</td>
+<td style="text-align: right;">28.89</td>
+<td style="text-align: right;">0.6000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Andrei Arlovski</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">1585</td>
+<td style="text-align: right;">37.74</td>
+<td style="text-align: right;">0.5476190</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Charles Oliveira</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">884</td>
+<td style="text-align: right;">26.00</td>
+<td style="text-align: right;">0.6764706</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Donald Cerrone</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">1748</td>
+<td style="text-align: right;">46.00</td>
+<td style="text-align: right;">0.6052632</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Demian Maia</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">739</td>
+<td style="text-align: right;">22.39</td>
+<td style="text-align: right;">0.6666667</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dustin Poirier</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1752</td>
+<td style="text-align: right;">56.52</td>
+<td style="text-align: right;">0.7096774</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jon Jones</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1564</td>
+<td style="text-align: right;">65.17</td>
+<td style="text-align: right;">0.9166667</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3457</td>
+<td style="text-align: right;">115.23</td>
+<td style="text-align: right;">0.7333333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Neil Magny</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">1428</td>
+<td style="text-align: right;">42.00</td>
+<td style="text-align: right;">0.6470588</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rafael Dos Anjos</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1822</td>
+<td style="text-align: right;">50.61</td>
+<td style="text-align: right;">0.5833333</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>top10_n_wins_sstrikes <span class="ot">&lt;-</span> <span class="fu">head</span>(fight_records_sstrikes, <span class="dv">10</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(top10_n_wins_sstrikes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 26%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">fighter</th>
+<th style="text-align: right;">total_fights</th>
+<th style="text-align: right;">wins</th>
+<th style="text-align: right;">losses</th>
+<th style="text-align: right;">total_significant_strikes</th>
+<th style="text-align: right;">avg_n_sstrikes</th>
+<th style="text-align: right;">win_percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jim Miller</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">1300</td>
+<td style="text-align: right;">28.89</td>
+<td style="text-align: right;">0.6000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Andrei Arlovski</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">1585</td>
+<td style="text-align: right;">37.74</td>
+<td style="text-align: right;">0.5476190</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Charles Oliveira</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">884</td>
+<td style="text-align: right;">26.00</td>
+<td style="text-align: right;">0.6764706</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Donald Cerrone</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">1748</td>
+<td style="text-align: right;">46.00</td>
+<td style="text-align: right;">0.6052632</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Demian Maia</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">739</td>
+<td style="text-align: right;">22.39</td>
+<td style="text-align: right;">0.6666667</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dustin Poirier</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1752</td>
+<td style="text-align: right;">56.52</td>
+<td style="text-align: right;">0.7096774</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jon Jones</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1564</td>
+<td style="text-align: right;">65.17</td>
+<td style="text-align: right;">0.9166667</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3457</td>
+<td style="text-align: right;">115.23</td>
+<td style="text-align: right;">0.7333333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Neil Magny</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">1428</td>
+<td style="text-align: right;">42.00</td>
+<td style="text-align: right;">0.6470588</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rafael Dos Anjos</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1822</td>
+<td style="text-align: right;">50.61</td>
+<td style="text-align: right;">0.5833333</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ufcpro_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can see how this ranking of fighters also still includes Max Holloway, Donald Cerrone, Dustin Poirier, and Rafael Dos Anjos. Looking at this plot we can see Jon Jones being an outlier in win_percentage and Max Holloway being an outlier in avg_n_sstrikes. Looking at the rest of the top 10 we can see they share similar relationships with these two variables while being the most winningest fighters in the UFC.</p>
+</section>
+<section id="rest-of-the-ufc" class="level2">
+<h2 class="anchored" data-anchor-id="rest-of-the-ufc">Rest of the UFC</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ufcpro_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>So after looking at the top 10 winningest fighters we can see that there are a good amount of fighters who have a win_percentage around 80 % but did not show up in the first plot. We also see that there are fighters with similar win_percentage as Jon Jones while having a lower average of significant strikes even after I filtered the table.</p>
+</section>
+<section id="modified-arrange-win_percentage" class="level2">
+<h2 class="anchored" data-anchor-id="modified-arrange-win_percentage">Modified arrange(-win_percentage)</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(fight_records_sstrikes <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">filter</span>(total_fights <span class="sc">&gt;=</span> <span class="dv">15</span>,</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>                win_percentage <span class="sc">&gt;=</span> .<span class="dv">75</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>         <span class="fu">head</span>(<span class="dv">10</span>),</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> total_fights,</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> win_percentage)) <span class="sc">+</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> fighter), </span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>, </span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">2</span>, </span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pander</span>() <span class="sc">+</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Total Number of Fights"</span>,</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Win Percentage %"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ufcpro_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 13%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 26%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">fighter</th>
+<th style="text-align: right;">total_fights</th>
+<th style="text-align: right;">wins</th>
+<th style="text-align: right;">losses</th>
+<th style="text-align: right;">total_significant_strikes</th>
+<th style="text-align: right;">avg_n_sstrikes</th>
+<th style="text-align: right;">win_percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jon Jones</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1564</td>
+<td style="text-align: right;">65.17</td>
+<td style="text-align: right;">0.9166667</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Georges St-Pierre</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1313</td>
+<td style="text-align: right;">59.68</td>
+<td style="text-align: right;">0.9090909</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aljamain Sterling</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1225</td>
+<td style="text-align: right;">61.25</td>
+<td style="text-align: right;">0.8000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Amanda Nunes</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">928</td>
+<td style="text-align: right;">51.56</td>
+<td style="text-align: right;">0.8888889</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Belal Muhammad</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1241</td>
+<td style="text-align: right;">65.32</td>
+<td style="text-align: right;">0.7894737</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Demetrious Johnson</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1173</td>
+<td style="text-align: right;">65.17</td>
+<td style="text-align: right;">0.8333333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Islam Makhachev</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">449</td>
+<td style="text-align: right;">28.06</td>
+<td style="text-align: right;">0.9375000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kamaru Usman</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1370</td>
+<td style="text-align: right;">76.11</td>
+<td style="text-align: right;">0.8333333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ryan Bader</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">577</td>
+<td style="text-align: right;">28.85</td>
+<td style="text-align: right;">0.7500000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jon Fitch</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">630</td>
+<td style="text-align: right;">35.00</td>
+<td style="text-align: right;">0.7777778</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Looking at this table we can see the top 10 fighters with the best win_percentage among fighters with more than 15 total_fights. We can see that Jon Jones has remained in this list as we’ve continued to make tables. This along with his avg_n_strikes compared to the rest of the list above might suggest that a higher total_significant_strikes or avg_n_sstrikes does not imply a higher win_percentage and this shows as Max Holloway is not in the list above. An outlier in this list to also consider is Islam Makhachev and Ryan Bader who have the lowest total_significant_strikes. Islam Makhachev is known to predominantly wrestle, going for takedowns and finishing matches with submissions, leading to his low amount of striking. Here is a good point to shift into look at submission stats.</p>
+</section>
+<section id="takedowns" class="level2">
+<h2 class="anchored" data-anchor-id="takedowns">Takedowns</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>ufc_takedowns <span class="ot">&lt;-</span> ufc_agg <span class="sc">%&gt;%</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(fighter) <span class="sc">%&gt;%</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_fights =</span> <span class="fu">n</span>(),</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_takedowns =</span> <span class="fu">sum</span>(takedown_landed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">tot_takedown_attempts =</span> <span class="fu">sum</span>(takedown_attempted, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">wins =</span> <span class="fu">sum</span>(winner <span class="sc">==</span> <span class="st">"W"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">losses =</span> <span class="fu">sum</span>(winner <span class="sc">==</span> <span class="st">"L"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_ko =</span> <span class="fu">sum</span>(result <span class="sc">==</span> <span class="st">"KO/TKO"</span> <span class="sc">&amp;</span> winner <span class="sc">==</span> <span class="st">"W"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_submissions =</span> <span class="fu">sum</span>(result <span class="sc">==</span> <span class="st">"Submission"</span> <span class="sc">&amp;</span> winner <span class="sc">==</span> <span class="st">"W"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(total_fights <span class="sc">&gt;=</span> <span class="dv">15</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">takedown_eff =</span> <span class="fu">round</span>(total_takedowns <span class="sc">/</span> tot_takedown_attempts, <span class="dv">2</span>),</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">avg_takedowns =</span> <span class="fu">round</span>(total_takedowns <span class="sc">/</span> total_fights, <span class="dv">2</span>)</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>wins, <span class="sc">-</span>total_takedowns)</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(ufc_takedowns, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">"Top 10 Fighters by Takedowns, KOs, and Submissions"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Top 10 Fighters by Takedowns, KOs, and Submissions</caption>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 16%">
+<col style="width: 3%">
+<col style="width: 5%">
+<col style="width: 6%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">fighter</th>
+<th style="text-align: right;">total_fights</th>
+<th style="text-align: right;">total_takedowns</th>
+<th style="text-align: right;">tot_takedown_attempts</th>
+<th style="text-align: right;">wins</th>
+<th style="text-align: right;">losses</th>
+<th style="text-align: right;">total_ko</th>
+<th style="text-align: right;">total_submissions</th>
+<th style="text-align: right;">takedown_eff</th>
+<th style="text-align: right;">avg_takedowns</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jim Miller</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">99</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">0.44</td>
+<td style="text-align: right;">0.98</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Charles Oliveira</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: right;">1.15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Donald Cerrone</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">0.63</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Andrei Arlovski</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">0.21</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Demian Maia</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">274</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">2.06</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Neil Magny</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">153</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">1.74</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jon Jones</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">98</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">1.88</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dustin Poirier</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.36</td>
+<td style="text-align: right;">0.90</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Max Holloway</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.53</td>
+<td style="text-align: right;">0.27</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rafael Dos Anjos</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.36</td>
+<td style="text-align: right;">1.89</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Join the two tables by fighter</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Add total wins to the joined table</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>ufc_finish_wins <span class="ot">&lt;-</span> ufc_knockdowns_ko <span class="sc">%&gt;%</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(fighter, total_ko, wins) <span class="sc">%&gt;%</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    ufc_takedowns <span class="sc">%&gt;%</span> <span class="fu">select</span>(fighter, total_submissions),</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="st">"fighter"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter Top 10 for each category</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>top_ko <span class="ot">&lt;-</span> ufc_finish_wins <span class="sc">%&gt;%</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_ko)) <span class="sc">%&gt;%</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">finish_type =</span> <span class="st">"KO/TKO"</span>, <span class="at">total_finishes =</span> total_ko)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>top_submissions <span class="ot">&lt;-</span> ufc_finish_wins <span class="sc">%&gt;%</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_submissions)) <span class="sc">%&gt;%</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">finish_type =</span> <span class="st">"Submission"</span>, <span class="at">total_finishes =</span> total_submissions)</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine both categories</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>top_finishers <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(top_ko, top_submissions)</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(top_finishers, <span class="fu">aes</span>(</span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">reorder</span>(fighter, <span class="sc">-</span>total_finishes), </span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> total_finishes, </span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">fill =</span> finish_type)) <span class="sc">+</span></span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>finish_type, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Top 10 UFC Finishers by KO/TKO and Submission"</span>,</span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Fighter"</span>,</span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Total Finishes"</span>,</span>
+<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Finish Type"</span></span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ufcpro_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

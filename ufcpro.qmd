@@ -1,0 +1,554 @@
+---
+title: "UFC Final Project"
+author: "Michael Leary, Jr."
+format: 
+  html:
+    theme: united
+    toc: true
+    toc-title: "Contents"
+    toc-depth: 2
+editor: visual
+---
+
+# Introduction
+
+This is my final project looking into UFC fight statistics including striking and takedowns and comparing the analysis we find related to these variables.
+
+# Data Source
+
+The UFC data used in this project was obtained from the ufc.stats package, developed by [mtoto](https://rdrr.io/github/mtoto/ufc.stats/f/README.md). The dataset includes updated statistics from official UFC fight records.
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, comment = NA, fig.align = "center")
+```
+
+## Packages
+
+```{r}
+# Same packages from the bike project
+library(dplyr)
+library(lubridate)
+library(tidyr)
+library(knitr)
+library(ggplot2)
+library(caret)
+# Data Cleaning
+library(stringr)
+library(purrr)
+# Different themes
+library(ggthemes)
+```
+
+## Data Set
+
+I found a package that was conveniently already available on R that included up to date statistics. Below is the installation code I input in the console followed by the library used for this project.
+
+```{r, eval=FALSE}
+devtools::install_github("mtoto/ufc.stats")
+data("ufc_stats")
+```
+
+```{r}
+library(ufc.stats)
+```
+
+```{r, eval=FALSE}
+# Update data
+refresh_data()
+data("ufc_stats")
+```
+
+## ufc_stats
+```{r, echo=FALSE}
+glimpse(ufc_stats)
+```
+
+```{r}
+kable(head(ufc_stats, 10))
+```
+The data available has been cleaned for the most part, but looking at the last code output we see that the data is broken down into 'rounds'. I aggregated the data to be broken down into fights using multiple variables to group observations and also made the following modifications.
+
+## Cleaning
+```{r}
+# Remove 'attendance' variable
+ufc_cleaner <- ufc_stats %>%
+  select(-attendance)
+```
+Looking at the first few rows of ufc_stats we can see that all the values for 'attendance' are null. This isn't a variable I'm concerned about so I removed it from the data set entirely.
+```{r}
+# Create fight-end indicator
+ufc_cleaner <- ufc_cleaner %>%
+  mutate(fight_end = paste0("Round ", last_round, " - ", time))
+```
+This variable will still show how many rounds each fight lasts followed by the time left in the round.
+```{r}
+# Create a unique opponent lookup table
+opponent_lookup <- ufc_cleaner %>%
+  select(id, fighter) %>%
+  # Ensure unique fighters with fight 'id'
+  distinct() %>%            
+  group_by(id) %>%
+  # Only keep fights with 2 fighters
+  filter(n() == 2) %>%     
+  # Reverse fighters for correct pairing
+  mutate(opponent = rev(fighter)) %>% 
+  ungroup()
+```
+This table helps add an 'opponent' variable to each observation that I then joined with the clean ufc_cleaner table
+```{r}
+# Left join to add 'opponent_lookup' to 'ufc_cleaner'
+ufc_cleaned <- ufc_cleaner %>%
+  left_join(opponent_lookup, by = c("id", "fighter"))
+```
+
+## Aggreate 
+```{r}
+ufc_agg <- ufc_cleaned %>%
+  group_by(
+    id, fighter, opponent, winner, result, event, fight_date, location, fight_end, scheduled_rounds
+  ) %>%
+  summarize(
+    weight_classes = paste(unique(weight_class), collapse = ", "),
+    knockdowns = sum(knockdowns, na.rm = TRUE),
+    sig_strikes_landed = sum(significant_strikes_landed, na.rm = TRUE),
+    sig_strikes_attempted = sum(significant_strikes_attempted, na.rm = TRUE),
+    takedown_landed = sum(takedown_successful, na.rm = TRUE),
+    takedown_attempted = sum(takedown_attempted, na.rm = TRUE),
+    submission_attempt = sum(submission_attempt, na.rm = TRUE),
+    head_landed = sum(head_landed, na.rm = TRUE),
+    head_attempted = sum(head_attempted, na.rm = TRUE),
+    body_landed = sum(body_landed, na.rm = TRUE),
+    body_attempted = sum(body_attempted, na.rm = TRUE),
+    leg_landed = sum(leg_landed, na.rm = TRUE),
+    leg_attempted = sum(leg_attempted, na.rm = TRUE),
+    clinch_landed = sum(clinch_landed, na.rm = TRUE),
+    clinch_attempted = sum(clinch_attempted, na.rm = TRUE),
+    ground_landed = sum(ground_landed, na.rm = TRUE),
+    ground_attempted = sum(ground_attempted, na.rm = TRUE),
+    .groups = "drop"
+  )
+```
+This code chunk is merging the raw data set I started with making it so that each observation includes information on a fight to fight basis versus by rounds. Below is an example of how I looked up a fighter to check ufc_agg along with the columns of the table that I'll be using for this project.
+
+## Fighter look up using Max Holloway
+```{r}
+max_holloway <- ufc_agg %>%
+  filter(fighter == "Max Holloway")
+
+kable(max_holloway, caption = "Max Holloway's Total Stats")
+```
+
+```{r}
+colnames(ufc_agg)
+```
+
+This code chunk shows how to look up stats for a specific fighter while also showing the variables in the cleaned and aggreagated ufc_agg data set.
+
+## ufc_agg
+
+```{r}
+kable(
+  head(ufc_agg),
+  caption = "Cleaned and Aggregated")
+```
+
+## Significant Strikes
+
+The site where I found the raw data set had an example usage section with code finding fighters with "the most significant strikes landed in UFC history". I copied it to see if I got a similar output after cleaning and aggregation. 
+```{r}
+ufc_sigsrikes <- ufc_agg %>% group_by(fighter) %>%
+  summarise(total_significant_strikes = sum(sig_strikes_landed),) %>%
+  arrange(-total_significant_strikes)
+
+kable(
+  head(ufc_sigsrikes, 10),
+  caption = "Top 10 Fighters by Total Career Significant Strikes")
+```
+
+The output was similar to what was on the website and reassures that this data is ready to use.
+
+Looking at the table I noticed that Max Holloway has a significantly larger amount of significant strikes landed than the next 9 fighters so I decided to look further into this.
+
+## Average Number of Signigicant Strikes
+
+I wanted to see if Max Holloway's large total_significant_strike was attributed to him having a significantly larger number of fights while also looking at the average number of significant strikes a fight with other fighters.
+```{r}
+# Summarize total significant strikes and number of fights to create `avg_n_sstrikes`
+most_sstrikes <- ufc_agg %>%
+  group_by(fighter) %>%
+  summarize(
+    total_fights = n(),
+    total_significant_strikes = sum(sig_strikes_landed)
+  ) %>%
+  mutate(avg_n_sstrikes = round(total_significant_strikes / total_fights, 2)) %>%
+  arrange(desc(total_significant_strikes))
+
+# Show Top 10 Fighters
+topten_total_sstrikes <- head(most_sstrikes, 10)
+
+kable(
+  head(topten_total_sstrikes, 10),
+  caption = "Top 10 Fighters by Total Career Significant Strikes")
+```
+```{r, echo=FALSE}
+ggplot(topten_total_sstrikes, aes(
+  x = avg_n_sstrikes,
+  y = total_significant_strikes,
+  fill = total_fights > 30)) +
+  geom_col() +
+  scale_fill_manual(
+    values = c("TRUE" = "darkred", "FALSE" = "lightblue"),
+    name = "Fights > 30"  # Legend Title
+  ) +
+  geom_text(aes(label = fighter), 
+            vjust = -0.5, 
+            size = 2, 
+            color = "black") +
+  scale_x_continuous(
+    breaks = seq(0, max(topten_total_sstrikes$avg_n_sstrikes), by = 5)
+  ) +
+  theme_fivethirtyeight() +
+  labs(x = "Average Number of Significant Strikes Landed per Fight",
+       y = "Total Career Number of Significant Strikes Landed")
+```
+Looking at the top 10 fighters in total significant strikes landed we can see that there are 3 other fighters who have more fights than Max Holloway. Comparing the stats to Joanna Jedrzejczyk we see she's the only fighter to average more significant strikes while having the lowest total_significant_strikes count in this table a fight while only having only 15 fights. 
+
+Fighters with more fights than Max Holloway
+
+- Donald Cerrone
+- Rafael Dos Anjos
+- Dustin Poirier
+
+What does this imply about Max Holloways striking and the 3 fighters listed? Is Max Holloway a better striker than a majority of the UFC? How has this translated to his fight record? We can look into this to see how his significant strike count is related to his knockdowns count and how many KO/TKO finish wins Max Holloway has.
+
+## knockdowns
+
+```{r}
+# find fighters with the highest `total_significant_strike` count and compare their knockdowns and KO/TKO finishes
+fighter_knockdowns <- ufc_agg %>%
+  group_by(fighter) %>%
+  summarize(
+    total_fights = n(),
+    total_significant_strikes = sum(sig_strikes_landed, na.rm = TRUE),
+    avg_n_sstrikes = round(total_significant_strikes / total_fights, 2),
+    total_knockdowns = sum(knockdowns, na.rm = TRUE),
+    total_ko = sum(result == "KO/TKO" & winner == "W", na.rm = TRUE)) %>%
+  arrange(-total_significant_strikes)
+
+top_10_sstrikes_knockdowns <- head(fighter_knockdowns, 10)
+
+kable(
+  top_10_sstrikes_knockdowns,
+  caption = "Top 10 Fighters by Total Knockdowns(Descending Order of Total Significant Strikes")
+```
+
+```{r, echo=FALSE}
+ggplot(top_10_sstrikes_knockdowns %>%
+         head(10), aes(
+       x = total_significant_strikes,
+       y = total_knockdowns,
+       fill = total_fights)) +
+  geom_col(width = 10) +
+  geom_text(aes(label = fighter), 
+            position = position_stack(vjust = 0.5),
+            vjust = -0.5, 
+            hjust = 0.5, 
+            size = 3, 
+            color = "firebrick") +
+  scale_x_continuous(
+    expand = c(0, 0),
+    breaks = seq(min(top_10_sstrikes_knockdowns$total_significant_strikes), 
+                 max(top_10_sstrikes_knockdowns$total_significant_strikes), 
+                 by = 500)) +
+  theme_hc() +
+  labs(
+    x = "Total Significant Strikes",
+    y = "Total Knockdowns",
+    caption = "Top 10 Fighters by Total Knockdowns(Descending Order of Total Significant Strikes")
+```
+We can see that Max Holloway has about an average total_knockdown count for this list. We can look to see if this is true when comparing him to the rest of the UFC.
+
+```{r}
+# find fighters average total knockdowns
+ufc_avg_knockdowns <- ufc_agg %>%
+  group_by(fighter) %>%
+  summarize(
+    total_fights = n(),
+    total_knockdowns = sum(knockdowns, na.rm = TRUE)
+  ) %>%
+  # filter to ensure average comes from fighters with multiple fights
+  filter(total_fights >= 15) %>%
+  summarize(avg_knockdowns = round(mean(total_knockdowns), 2))
+
+ufc_avg_knockdowns
+```
+
+```{r, echo=FALSE}
+ggplot(fighter_knockdowns %>%
+         head(10), aes(
+       x = total_knockdowns,
+       y = total_ko,
+       fill = total_fights)) +
+  geom_col() +
+  geom_text(aes(label = fighter), 
+            position = position_stack(vjust = 0.5),
+            vjust = -0.5, 
+            hjust = 0.5, 
+            size = 3, 
+            color = "firebrick") +
+  theme_hc() +
+  labs(
+    title = "Knockdowns vs. KO/TKO wins (Top 10 Fighters in Total Significant Strikes)",
+    x = "Total Knockdowns",
+    y = "Total KO/TKO wins")
+```
+With this visual we can see that Max Holloway compares well in this table as he is tied with 3 other fighters in this table. Below I modified the visual to show how this comparison among fighters in the UFC where I modified it to arrange the table by number of Total KO/TKO wins.
+
+```{r}
+# New table to see this code in `ufc_agg`
+
+ufc_knockdowns_ko<- ufc_agg %>%
+  group_by(fighter) %>%
+  summarize(
+    total_fights = n(),
+    total_significant_strikes = sum(sig_strikes_landed, na.rm = TRUE),
+    avg_n_sstrikes = round(total_significant_strikes / total_fights, 2),
+    total_knockdowns = sum(knockdowns, na.rm = TRUE),
+    total_ko = sum(result == "KO/TKO" & winner == "W", na.rm = TRUE)) %>%
+  arrange(-total_ko)
+
+ggplot(ufc_knockdowns_ko %>%
+         filter(total_fights >= 15), aes(
+       x = total_knockdowns,
+       y = total_ko,
+       color = total_fights)) +
+  geom_point() +
+  theme_pander() +
+  labs(
+    title = "Knockdowns vs. KO/TKO wins (Fighters with 15 or more Fights)",
+    x = "Total Knockdowns",
+    y = "Total KO/TKO wins")
+```
+
+In this visual we can see that Max Holloway is about an average fighter when it comes to his comparison in these conditions. I made a new table down below to compare the records of other fighters and see how Max Holloway compares. 
+
+## fight_records_sstrikes
+```{r}
+# table with fight record of fighters while including more variables
+fight_records_and_sstrikes <- ufc_agg %>%
+  group_by(fighter) %>%
+  summarize(
+    total_fights = n(),
+    wins = sum(winner == "W", na.rm = TRUE),
+    losses = sum(winner == "L", na.rm = TRUE),
+    total_significant_strikes = sum(sig_strikes_landed, na.rm = TRUE)
+) %>%
+  mutate(
+    avg_n_sstrikes = round(total_significant_strikes / total_fights, 2),
+    win_percentage = wins / total_fights) %>%
+  # Arrange in descending order of `wins` & ascending order of `losses`
+  arrange(-wins, +losses)
+
+kable(
+  head(fight_records_and_sstrikes, 10),
+  caption = "Top 10 Fighters in Total Wins(Ascending Order of Losses)")
+```
+
+I originally tried to arrange this table in descending order of win_percentage but the first 10 fighters only had one or a few number of total_fights which is why down below I arranged it with arrange(-wins, +losses). We can see it's not much different than using arrange(-wins) so I used the code down below.
+
+```{r}
+fight_records_sstrikes <- ufc_agg %>%
+  group_by(fighter) %>%
+  summarize(
+    total_fights = n(),
+    wins = sum(winner == "W", na.rm = TRUE),
+    losses = sum(winner == "L", na.rm = TRUE),
+    total_significant_strikes = sum(sig_strikes_landed, na.rm = TRUE)
+  ) %>%
+  mutate(
+    avg_n_sstrikes = round(total_significant_strikes / total_fights, 2),
+    win_percentage = wins / total_fights) %>%
+  # Arrange by wins in descending order
+  arrange(-wins)
+
+kable(
+  head(fight_records_sstrikes, 10),
+  caption = "Top 10 Winningest Fighters")
+```
+
+```{r}
+top10_n_wins_sstrikes <- head(fight_records_sstrikes, 10)
+
+kable(top10_n_wins_sstrikes)
+```
+
+```{r, echo=FALSE}
+ggplot(top10_n_wins_sstrikes, aes(
+  x = avg_n_sstrikes,
+  y = win_percentage)) +
+  geom_point() +
+  geom_text(aes(label = fighter), 
+            vjust = -0.5, 
+            size = 2, 
+            color = "black") +
+  theme_pander() +
+  labs(
+    x = "Average Number of Signigicant Strikes Landed",
+    y = "Win Percentage")
+```
+We can see how this ranking of fighters also still includes Max Holloway, Donald Cerrone, Dustin Poirier, and Rafael Dos Anjos. Looking at this plot we can see Jon Jones being an outlier in win_percentage and Max Holloway being an outlier in avg_n_sstrikes. Looking at the rest of the top 10 we can see they share similar relationships with these two variables while being the most winningest fighters in the UFC. 
+
+## Rest of the UFC
+```{r, echo=FALSE}
+ggplot(fight_records_sstrikes %>%
+         filter(total_fights >= 15), 
+  aes(
+  x = avg_n_sstrikes,
+  y = win_percentage,
+  color = total_fights >= 30)
+) +
+  geom_point() +
+  scale_fill_manual(
+    values = c("TRUE" = "darkred", "FALSE" = "lightblue"),
+    name = "Fights >= 30") +
+  theme_pander() +
+  labs(
+    x = "Average Number of Significant Strikes a Fight",
+    y = "Win Percentage")
+```
+
+So after looking at the top 10 winningest fighters we can see that there are a good amount of fighters who have a win_percentage around 80 % but did not show up in the first plot. We also see that there are fighters with similar win_percentage as Jon Jones while having a lower average of significant strikes even after I filtered the table.
+
+## Modified arrange(-win_percentage)
+
+```{r}
+ggplot(fight_records_sstrikes %>%
+         filter(total_fights >= 15,
+                win_percentage >= .75) %>%
+         head(10),
+  aes(
+  x = total_fights,
+  y = win_percentage)) +
+  geom_point() +
+  geom_text(aes(label = fighter), 
+            vjust = -0.5, 
+            size = 2, 
+            color = "black") +
+  theme_pander() +
+  labs(
+    x = "Total Number of Fights",
+    y = "Win Percentage %")
+```
+
+```{r,include=FALSE}
+top_fight_records_sstrikes <- fight_records_sstrikes %>%
+         filter(total_fights >= 15,
+                win_percentage >= .75)
+```
+```{r, echo=FALSE}
+kable(
+  head(top_fight_records_sstrikes, 10))
+```
+Looking at this table we can see the top 10 fighters with the best win_percentage among fighters with more than 15 total_fights. We can see that Jon Jones has remained in this list as we've continued to make tables. This along with his avg_n_strikes compared to the rest of the list above might suggest that a higher total_significant_strikes or avg_n_sstrikes does not imply a higher win_percentage and this shows as Max Holloway is not in the list above. An outlier in this list to also consider is Islam Makhachev and Ryan Bader who have the lowest total_significant_strikes.
+Islam Makhachev is known to predominantly wrestle, going for takedowns and finishing matches with submissions, leading to his low amount of striking. Here is a good point to shift into look at submission stats.
+
+## Takedowns
+```{r}
+ufc_takedowns <- ufc_agg %>%
+  group_by(fighter) %>%
+  summarize(
+    total_fights = n(),
+    total_takedowns = sum(takedown_landed, na.rm = TRUE),
+    tot_takedown_attempts = sum(takedown_attempted, na.rm = TRUE),
+    wins = sum(winner == "W", na.rm = TRUE),
+    losses = sum(winner == "L", na.rm = TRUE),
+    total_ko = sum(result == "KO/TKO" & winner == "W", na.rm = TRUE),
+    total_submissions = sum(result == "Submission" & winner == "W", na.rm = TRUE)
+  ) %>%
+  filter(total_fights >= 15) %>%
+  mutate(
+    takedown_eff = round(total_takedowns / tot_takedown_attempts, 2),
+    avg_takedowns = round(total_takedowns / total_fights, 2)
+  ) %>%
+  arrange(-wins, -total_takedowns)
+
+# Display the first few rows
+kable(head(ufc_takedowns, 10), caption = "Top 10 Fighters by Takedowns, KOs, and Submissions")
+```
+
+```{r, echo=FALSE}
+ufc_knockdowns_ko<- ufc_agg %>%
+  group_by(fighter) %>%
+  summarize(
+    total_fights = n(),
+    wins = sum(winner == "W", na.rm = TRUE),
+    losses = sum(winner == "L", na.rm = TRUE),
+    total_significant_strikes = sum(sig_strikes_landed, na.rm = TRUE),
+    avg_n_sstrikes = round(total_significant_strikes / total_fights, 2),
+    total_knockdowns = sum(knockdowns, na.rm = TRUE),
+    total_ko = sum(result == "KO/TKO" & winner == "W", na.rm = TRUE)) %>%
+  arrange(-total_ko)
+
+ufc_takedowns <- ufc_agg %>%
+  group_by(fighter) %>%
+  summarize(
+    total_fights = n(),
+    total_takedowns = sum(takedown_landed, na.rm = TRUE),
+    tot_takedown_attempts = sum(takedown_attempted, na.rm = TRUE),
+    total_submissions = sum(result == "Submission" & winner == "W", na.rm = TRUE),
+    wins = sum(winner == "W", na.rm = TRUE),
+    losses = sum(winner == "L", na.rm = TRUE)
+  ) %>%
+  filter(total_fights >= 15) %>%
+  mutate(
+    takedown_eff = round(total_takedowns / tot_takedown_attempts, 2),
+    avg_takedowns = round(total_takedowns / total_fights, 2)
+  ) %>%
+  arrange(-wins, -total_submissions)
+```
+
+```{r}
+# Join the two tables by fighter
+# Add total wins to the joined table
+ufc_finish_wins <- ufc_knockdowns_ko %>%
+  select(fighter, total_ko, wins) %>%
+  inner_join(
+    ufc_takedowns %>% select(fighter, total_submissions),
+    by = "fighter")
+```
+
+```{r}
+# Filter Top 10 for each category
+top_ko <- ufc_finish_wins %>%
+  arrange(desc(total_ko)) %>%
+  slice_head(n = 10) %>%
+  mutate(finish_type = "KO/TKO", total_finishes = total_ko)
+
+top_submissions <- ufc_finish_wins %>%
+  arrange(desc(total_submissions)) %>%
+  slice_head(n = 10) %>%
+  mutate(finish_type = "Submission", total_finishes = total_submissions)
+
+# Combine both categories
+top_finishers <- bind_rows(top_ko, top_submissions)
+
+# Plot
+ggplot(top_finishers, aes(
+  x = reorder(fighter, -total_finishes), 
+  y = total_finishes, 
+  fill = finish_type)) +
+  geom_col(width = 0.7) +
+  facet_wrap(~finish_type, scales = "free") +
+  coord_flip() +
+  theme_minimal() +
+  labs(
+    title = "Top 10 UFC Finishers by KO/TKO and Submission",
+    x = "Fighter",
+    y = "Total Finishes",
+    fill = "Finish Type"
+  )
+
+```
+
